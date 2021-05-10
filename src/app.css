@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+#display-weather {
+	display: none;
+	width: 545px;
+	height: 140px;
+	padding: 14px 12px;
+	border: 1px solid rgb(240, 240, 240);
+}
+
+#display-weather.show-weather {
+	display: block;
+}
+
+#weather-title {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: rgb(123, 123, 123);
+	padding-bottom: 30px;
+}
+
+#weather-table {
+	display: table-row;
+	font-family: Arial, sans-serif;
+}
+
+.weather-cell {
+	display: table-cell;
+	width: 172px;
+	height: 90px;
+	padding-left: 27px;
+}
+
+.weather-cell:first-child {
+	padding-left: 0 !important;
+}
+
+.weather-heading {
+	height: 28px;
+	background-color: rgb(107, 156, 189);
+	color: rgb(255, 255, 255);
+	font-family: inherit;
+	font-size: 14px;
+	padding: 7px 10px;
+	box-sizing: border-box;
+	font-weight: 700;
+}
+
+.weather-content {
+	height: 63px;
+}
+
+[id^="day"][id$="-icon"] {
+	height: 50px;
+	width: 50px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left 0 top 13px;
+	vertical-align: top;
+	float: left;
+}
+
+.sunny {
+	background-image: url(/img/sunny.png);
+}
+.rain {
+	background-image: url(/img/rain.png);
+}
+.snow {
+	background-image: url(/img/snow.png);
+}
+.cloudy {
+	background-image: url(/img/cloudy.png);
+}
+
+.weather-details {
+	display: table;
+	font-family: 11px;
+	padding-left: 15px;
+}
+.weather-forecast {
+	text-transform: capitalize;
+	padding-top: 15px;
+	display: inline-table;
+	width: 100%;
+}
+
+.weather-temps {
+	padding-top: 15px;
+	display: inline-table;
+}
+
+[id$="-temp-max"] {
+	font-weight: bold;	
+}
+
+.temp::after {
+	content: "\00B0";
+}
